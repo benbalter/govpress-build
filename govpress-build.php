@@ -335,9 +335,9 @@ class GovPress_Build {
 
 		$download_file = download_url($package);
 
-		if ( is_wp_error($download_file) ) {
+		if ( is_wp_error($download_file) ) 
 			return new WP_Error('download_failed', $this->strings['download_failed'], $download_file->get_error_message());
-		}
+		
 		return $download_file;
 
 	}
